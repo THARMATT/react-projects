@@ -28,11 +28,13 @@ function App() {
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0,30);
     window.navigator.clipboard.writeText(password)
+    alert('copied')
 
   },[password])
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg my-8 text-orange-500 bg-gray-700 px-4 py-3">
+    <div className="flex items-center py-20">
+    <div className="w-full max-w-md mx-auto shadow-md rounded-lg my-8 text-orange-500 bg-gray-700 px-4 py-3  ">
         Password-Generator
         <div className="flex shadow rounded-lg overflow-hidden md-4">
           <input
@@ -88,6 +90,8 @@ function App() {
           </div>
         </div>
       </div>
+    </div>
+     
     </>
   );
 }
